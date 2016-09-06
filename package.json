@@ -39,5 +39,10 @@
   },
   "dependencies": {
     "chai": "^3.5.0"
-  }
+  },
+  "files": [
+    "package.json",
+    "dist",
+    "README.dm"
+  ]
 }
