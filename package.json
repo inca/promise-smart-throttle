@@ -8,7 +8,7 @@
     "test": "mocha",
     "compile": "babel -d dist src/",
     "preversion": "npm run check && npm run test",
-    "version": "npm run compile && git add"
+    "version": "npm run compile && git add ."
   },
   "repository": {
     "type": "git",
