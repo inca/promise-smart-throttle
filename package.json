@@ -1,6 +1,6 @@
 {
   "name": "promise-smart-throttle",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Smart throttle utility for Promise",
   "main": "index.js",
   "scripts": {
