@@ -1,0 +1,43 @@
+{
+  "name": "promise-smart-throttle",
+  "version": "0.0.0",
+  "description": "Smart throttle utility for Promise",
+  "main": "index.js",
+  "scripts": {
+    "check": "eslint src",
+    "test": "mocha",
+    "compile": "babel -d dist src/",
+    "preversion": "npm run check && npm run test",
+    "version": "npm run compile && git add"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inca/promise-smart-throttle.git"
+  },
+  "keywords": [
+    "promise",
+    "throttle",
+    "debounce",
+    "flow",
+    "control"
+  ],
+  "author": "Boris Okunskiy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/inca/promise-smart-throttle/issues"
+  },
+  "homepage": "https://github.com/inca/promise-smart-throttle#readme",
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-eslint": "^6.1.2",
+    "babel-plugin-transform-async-to-generator": "^6.8.0",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-register": "^6.14.0",
+    "eslint": "^3.4.0",
+    "mocha": "^3.0.2"
+  },
+  "dependencies": {
+    "chai": "^3.5.0"
+  }
+}

@@ -1,0 +1,5 @@
+-R spec
+--compilers js:babel-register
+--slow 200ms
+--timeout 1s
+test/**/*.test.js
