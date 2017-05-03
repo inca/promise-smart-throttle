@@ -1,7 +1,7 @@
 'use strict';
 
 const throttle = require('../src/index');
-const { expect } = require('chai');
+const expect = require('expect');
 
 describe('smart throttle', () => {
 
@@ -20,9 +20,9 @@ describe('smart throttle', () => {
     const throttled = throttle(uppercase, 50);
     const startedAt = Date.now();
     const res = await throttled('hello');
-    expect(res).to.equal('HELLO');
-    expect(Date.now() - startedAt).to.be.below(100);
-    expect(callsCount).to.equal(1);
+    expect(res).toEqual('HELLO');
+    expect(Date.now() - startedAt).toBeLessThan(100);
+    expect(callsCount).toEqual(1);
   });
 
   it('should resolve latest result if called multiple times', async () => {
@@ -35,12 +35,12 @@ describe('smart throttle', () => {
     throttled('lots of calls allowed');
     throttled('only last will win anyway');
     setTimeout(() => throttled('howdy'), 10);
-    expect(await first).to.equal('HELLO');
-    expect(await second).to.equal('HOWDY');
-    expect(await third).to.equal('HOWDY');
-    expect(callsCount).to.equal(2);
-    expect(Date.now() - startedAt).to.be.above(150);
-    expect(Date.now() - startedAt).to.be.below(200);
+    expect(await first).toEqual('HELLO');
+    expect(await second).toEqual('HOWDY');
+    expect(await third).toEqual('HOWDY');
+    expect(callsCount).toEqual(2);
+    expect(Date.now() - startedAt).toBeGreaterThan(150);
+    expect(Date.now() - startedAt).toBeLessThan(200);
   });
 
 });
