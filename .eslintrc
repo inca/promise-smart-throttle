@@ -4,6 +4,10 @@
     "node": true,
     "browser": true
   },
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "sourceType": "script"
+  },
   "rules": {
     "brace-style": [2, "1tbs", { "allowSingleLine": true }],
     "camelcase": 2,
